@@ -20,15 +20,15 @@
 将 5 个目录全部复制到 WorkBuddy 用户技能目录（Windows 示例）：
 
 ```powershell
-git clone https://github.com/Moways3305/bovey-workbuddy-skills.git
-Copy-Item -Recurse bovey-workbuddy-skills\skills\* "$env:USERPROFILE\.workbuddy\skills\"
+git clone https://github.com/Moways3305/moways-workbuddy-skills.git
+Copy-Item -Recurse moways-workbuddy-skills\skills\* "$env:USERPROFILE\.workbuddy\skills\"
 ```
 
 macOS / Linux：
 
 ```bash
-git clone https://github.com/Moways3305/bovey-workbuddy-skills.git
-cp -r bovey-workbuddy-skills/skills/* ~/.workbuddy/skills/
+git clone https://github.com/Moways3305/moways-workbuddy-skills.git
+cp -r moways-workbuddy-skills/skills/* ~/.workbuddy/skills/
 ```
 
 复制完成后**新开 WorkBuddy 会话**即可被自动发现。验证触发：
