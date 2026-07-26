@@ -1,0 +1,4 @@
+interface:
+  display_name: "研究 AI 工具"
+  short_description: "研究理论、同类工具并形成可执行的 Excel 指标字典"
+  default_prompt: "为这个 AI 工具完成方法论、同类产品和评测指标研究。"

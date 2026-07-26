@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0",
+  "example_id": "meeting-action-followup",
+  "title": "把会议行动项方法转成可验证 Skill 设计",
+  "data_classification": "synthetic-only",
+  "evidence_level": "dry_run",
+  "host_runtime": "not_verified",
+  "selected_artifact": "skill",
+  "stages_completed": [
+    "S0",
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5",
+    "S6"
+  ],
+  "current_gate": "S7",
+  "release_ready": false,
+  "baseline_assertions": {
+    "passed": 5,
+    "total": 10,
+    "trials": 1
+  },
+  "allowed_roles": [
+    "项目经理",
+    "交付负责人",
+    "研究负责人",
+    "行政协调人",
+    "讨论"
+  ],
+  "stage_evidence": {
+    "S0": {
+      "file": "outputs/产品设计摘要.md",
+      "anchor": "## 本轮边界"
+    },
+    "S1": {
+      "file": "outputs/产品设计摘要.md",
+      "anchor": "## 产品合同"
+    },
+    "S2": {
+      "file": "outputs/研究与指标摘要.md",
+      "anchor": "## S2 方法证据"
+    },
+    "S3": {
+      "file": "outputs/研究与指标摘要.md",
+      "anchor": "## S3 同类方案"
+    },
+    "S4": {
+      "file": "outputs/eval-catalog.json",
+      "anchor": "\"counts\""
+    },
+    "S5": {
+      "file": "outputs/without-skill基线.md",
+      "anchor": "## 断言快照"
+    },
+    "S6": {
+      "file": "outputs/产品设计摘要.md",
+      "anchor": "## 形态决策"
+    }
+  },
+  "included_files": [
+    "README.md",
+    "fixtures/虚构会议记录-01.md",
+    "outputs/产品设计摘要.md",
+    "outputs/研究与指标摘要.md",
+    "outputs/eval-catalog.json",
+    "outputs/without-skill基线.md",
+    "outputs/stage-status.json",
+    "assets/结果卡.svg"
+  ],
+  "limitations": [
+    "本示范件展示 S0-S6 设计与评测合同，不代表目标 Skill 已构建",
+    "without-skill 基线只有一个虚构样本、一个 trial",
+    "没有执行目标宿主触发、安装、发送或外部系统写入"
+  ]
+}

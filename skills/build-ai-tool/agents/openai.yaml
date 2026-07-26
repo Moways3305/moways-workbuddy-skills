@@ -1,0 +1,4 @@
+interface:
+  display_name: "构建 AI 工具"
+  short_description: "根据研究、指标和评测基线构建 Skill 或 Plugin MVP"
+  default_prompt: "根据设计和研究成果，构建一个可测试的 Skill 或 Plugin。"

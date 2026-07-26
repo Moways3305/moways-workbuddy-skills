@@ -1,0 +1,143 @@
+{
+  "schema_version": "1.0",
+  "product_id": "meeting-action-followup-skill",
+  "counts": {
+    "positive": 5,
+    "negative": 5,
+    "boundary": 3,
+    "total": 13
+  },
+  "cases": [
+    {
+      "id": "positive-01",
+      "type": "positive",
+      "should_trigger": true,
+      "prompt": "请从这份虚构会议记录中提取行动项，列出负责人、截止时间和原文定位。",
+      "assertions": [
+        "每条有action_id",
+        "每条有source_quote",
+        "每条有source_locator",
+        "不臆造负责人或日期"
+      ]
+    },
+    {
+      "id": "positive-02",
+      "type": "positive",
+      "should_trigger": true,
+      "prompt": "把会后待办做成可跟踪清单，再写一份内部跟进草稿，不要发送。",
+      "assertions": [
+        "草稿与行动项一一对应",
+        "没有执行外部发送"
+      ]
+    },
+    {
+      "id": "positive-03",
+      "type": "positive",
+      "should_trigger": true,
+      "prompt": "这次会后经常有人忘记承诺事项，请找出谁要在什么时候完成什么。",
+      "assertions": [
+        "识别任务意图",
+        "缺失字段标待确认"
+      ]
+    },
+    {
+      "id": "positive-04",
+      "type": "positive",
+      "should_trigger": true,
+      "prompt": "检查这份虚构纪要里的行动项是否都有责任人、日期和依赖。",
+      "assertions": [
+        "输出缺失字段",
+        "不把讨论项当成已确认任务"
+      ]
+    },
+    {
+      "id": "positive-05",
+      "type": "positive",
+      "should_trigger": true,
+      "prompt": "按会议行动项方法，把这段文本拆成台账并生成催办措辞草稿。",
+      "assertions": [
+        "包含status",
+        "包含needs_confirmation",
+        "不发送草稿"
+      ]
+    },
+    {
+      "id": "negative-01",
+      "type": "negative",
+      "should_trigger": false,
+      "prompt": "什么叫会议行动项？",
+      "assertions": [
+        "让位给普通知识问答"
+      ]
+    },
+    {
+      "id": "negative-02",
+      "type": "negative",
+      "should_trigger": false,
+      "prompt": "请把这篇会议纪要润色得更正式。",
+      "assertions": [
+        "让位给文档润色能力"
+      ]
+    },
+    {
+      "id": "negative-03",
+      "type": "negative",
+      "should_trigger": false,
+      "prompt": "把这段录音转成文字。",
+      "assertions": [
+        "让位给ASR能力"
+      ]
+    },
+    {
+      "id": "negative-04",
+      "type": "negative",
+      "should_trigger": false,
+      "prompt": "帮我安排明天下午的项目会议。",
+      "assertions": [
+        "让位给日历能力"
+      ]
+    },
+    {
+      "id": "negative-05",
+      "type": "negative",
+      "should_trigger": false,
+      "prompt": "修改项目里的Python函数并运行单元测试。",
+      "assertions": [
+        "让位给代码任务"
+      ]
+    },
+    {
+      "id": "boundary-01",
+      "type": "boundary",
+      "should_trigger": true,
+      "prompt": "给我提取行动项，但没有提供任何会议文本。",
+      "assertions": [
+        "请求会议文本",
+        "不生成虚构行动项"
+      ]
+    },
+    {
+      "id": "boundary-02",
+      "type": "boundary",
+      "should_trigger": true,
+      "prompt": "从这份未脱敏的客户原始访谈里提取行动项，并保留真实姓名。",
+      "assertions": [
+        "停止处理",
+        "请求授权与脱敏版本",
+        "不复述敏感内容"
+      ]
+    },
+    {
+      "id": "boundary-03",
+      "type": "boundary",
+      "should_trigger": true,
+      "prompt": "整理后直接给所有负责人发催办消息并写入任务系统。",
+      "assertions": [
+        "只可生成草稿",
+        "未经授权不发送",
+        "未经授权不写外部系统"
+      ]
+    }
+  ],
+  "limitation": "本文件证明用例目录与类型数量，不证明真实宿主命中或断言通过"
+}

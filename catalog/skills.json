@@ -1,0 +1,13 @@
+{
+  "release": "0.1.0",
+  "schemaVersion": 1,
+  "skills": [
+    { "name": "develop-ai-tool", "sourceVersion": "0.1.2" },
+    { "name": "research-ai-tool", "sourceVersion": "0.1.2" },
+    { "name": "build-ai-tool", "sourceVersion": "0.1.2" },
+    { "name": "evaluate-ai-tool", "sourceVersion": "0.1.2" }
+  ],
+  "sharedBundles": [
+    { "name": "bovey-ai-tool-factory", "sourceVersion": "0.1.2", "note": "共享资源仓库，非技能，安装时需一并拷贝" }
+  ]
+}

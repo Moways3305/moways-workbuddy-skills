@@ -1,0 +1,23 @@
+{
+  "name": "bovey-ai-tool-factory",
+  "version": "0.1.2",
+  "description": "博维内部的 Skill 与 Plugin 研发工厂：完成研究、指标字典、构建、评测和发布准备。",
+  "author": {
+    "name": "博维管理咨询"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "博维 AI 工具工厂",
+    "shortDescription": "把业务方法转成可评测、可打包的 Skill 或 Plugin",
+    "longDescription": "从问题定义、方法与同类工具研究、Excel 指标字典，到官方脚手架构建、行为评测、安全检查、版本打包和迭代监测。",
+    "developerName": "博维管理咨询",
+    "category": "Productivity",
+    "capabilities": [
+      "AI 工具研发编排",
+      "Skill 与 Plugin 构建",
+      "指标字典与评测",
+      "发布准备"
+    ],
+    "defaultPrompt": "把我的业务流程做成一个有研究依据、有指标字典、有测试和版本管理的 AI 工具。"
+  }
+}

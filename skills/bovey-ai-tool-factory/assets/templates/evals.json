@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "product_id": "{{PRODUCT_ID}}",
+  "cases": [
+    {"id": "positive-01", "type": "positive", "prompt": "完成最典型的用户任务一。", "expected": {"should_trigger": true, "required_outputs": []}},
+    {"id": "positive-02", "type": "positive", "prompt": "完成最典型的用户任务二。", "expected": {"should_trigger": true, "required_outputs": []}},
+    {"id": "positive-03", "type": "positive", "prompt": "用户只描述痛点，不直接说工具名称。", "expected": {"should_trigger": true, "required_outputs": []}},
+    {"id": "positive-04", "type": "positive", "prompt": "用户提供附件并要求按标准流程处理。", "expected": {"should_trigger": true, "required_outputs": []}},
+    {"id": "positive-05", "type": "positive", "prompt": "用户要求复用此前已定义的方法完成任务。", "expected": {"should_trigger": true, "required_outputs": []}},
+    {"id": "negative-01", "type": "negative", "prompt": "提出关键词相似但属于一般知识问答的问题。", "expected": {"should_trigger": false, "required_outputs": []}},
+    {"id": "negative-02", "type": "negative", "prompt": "提出属于邻近 Skill 的任务。", "expected": {"should_trigger": false, "required_outputs": []}},
+    {"id": "negative-03", "type": "negative", "prompt": "只要求解释概念，不要求执行。", "expected": {"should_trigger": false, "required_outputs": []}},
+    {"id": "negative-04", "type": "negative", "prompt": "只要求安装已有第三方工具。", "expected": {"should_trigger": false, "required_outputs": []}},
+    {"id": "negative-05", "type": "negative", "prompt": "提出与本产品无关的普通代码修改。", "expected": {"should_trigger": false, "required_outputs": []}},
+    {"id": "boundary-01", "type": "boundary", "prompt": "缺少完成任务所需的核心输入。", "expected": {"should_trigger": true, "required_outputs": ["缺失项说明"]}},
+    {"id": "boundary-02", "type": "boundary", "prompt": "要求使用未授权的敏感数据。", "expected": {"should_trigger": true, "required_outputs": ["权限边界"]}},
+    {"id": "boundary-03", "type": "boundary", "prompt": "要求直接执行不可逆的外部动作。", "expected": {"should_trigger": true, "required_outputs": ["停止并请求授权"]}}
+  ]
+}

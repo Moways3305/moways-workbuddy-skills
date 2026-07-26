@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0",
+  "product_id": "meeting-action-followup-skill",
+  "artifact_type": "skill",
+  "data_classification": "synthetic-only",
+  "stages": {
+    "S0": "passed",
+    "S1": "passed",
+    "S2": "passed",
+    "S3": "passed",
+    "S4": "passed",
+    "S5": "passed",
+    "S6": "passed",
+    "S7": "not_started",
+    "S8": "not_started",
+    "S9": "not_started",
+    "S10": "not_started",
+    "S11": "not_started"
+  },
+  "release_readiness": "not_ready",
+  "host_runtime": "not_verified",
+  "current_gate": "S7",
+  "scope_note": "本示范只完成 S0-S6；未构建、未安装、未发送、未发布"
+}

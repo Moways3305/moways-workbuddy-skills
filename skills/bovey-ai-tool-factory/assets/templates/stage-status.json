@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "product_id": "{{PRODUCT_ID}}",
+  "artifact_type": "{{ARTIFACT_TYPE}}",
+  "owner": "{{OWNER}}",
+  "stages": {
+    "S0": "in_progress",
+    "S1": "not_started",
+    "S2": "not_started",
+    "S3": "not_started",
+    "S4": "not_started",
+    "S5": "not_started",
+    "S6": "not_started",
+    "S7": "not_started",
+    "S8": "not_started",
+    "S9": "not_started",
+    "S10": "not_started",
+    "S11": "not_started"
+  },
+  "release_readiness": "not_ready",
+  "host_runtime": "not_verified"
+}

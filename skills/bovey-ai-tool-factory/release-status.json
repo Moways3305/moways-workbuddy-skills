@@ -1,0 +1,18 @@
+{
+  "product_version": "0.1.2",
+  "source_sha256": "E5CD63EBC7A86D4A22880538605E0EE090CE97770FBF1CA99375911A04B87611",
+  "generated_at": "2026-07-26T17:23:25+08:00",
+  "static_validation": "passed",
+  "behavior_evaluation": "dry_run_passed",
+  "independent_judge": "passed",
+  "security_review": "static_passed",
+  "host_runtime": "not_verified",
+  "approved_for_packaging": true,
+  "release_channel": "internal_candidate",
+  "evidence_paths": {
+    "static_validation": "reports/static-validation.md",
+    "behavior_evaluation": "reports/forward-test.md",
+    "independent_judge": "reports/independent-judge.md",
+    "security_review": "reports/security-review.md"
+  }
+}
